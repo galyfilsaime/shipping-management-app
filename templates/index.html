@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container text-center">
+    <h1 class="mt-5">Welcome to Shipping Management</h1>
+    <p class="lead">Track your shipments, manage your packages, and more!</p>
+    <div class="row mt-4">
+        <div class="col-md-4">
+            <h3>Track a Shipment</h3>
+            <p>Enter a tracking number to check the status of any shipment.</p>
+            <a href="{{ url_for('track') }}" class="btn btn-primary">Track Now</a>
+        </div>
+        <div class="col-md-4">
+            <h3>Manage Your Account</h3>
+            <p>Log in to view your shipments and manage your account.</p>
+            <a href="{{ url_for('login') }}" class="btn btn-primary">Log In</a>
+        </div>
+        <div class="col-md-4">
+            <h3>New User?</h3>
+            <p>Create an account to start managing your shipments.</p>
+            <a href="{{ url_for('register') }}" class="btn btn-primary">Register</a>
+        </div>
+    </div>
+</div>
+{% endblock %}
